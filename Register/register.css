@@ -1,0 +1,71 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --template_bg_color: #91e1f0ce !important;
+    --template_color: black;
+}
+
+body {
+    background-color: var(--template_bg_color);
+}
+
+svg {
+    padding: 0;
+    margin: 0;
+}
+
+.key_icon {
+    padding: .375rem .6rem;
+}
+
+.form_class {
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: row;
+    border-bottom-style: solid;
+    border-left-style: solid;
+    border-right-style: solid;
+    border-radius: 5rem;
+    border-width: 1rem;
+    font-size: 1.5rem;
+    justify-content: center;
+    align-items: center;
+    -webkit-box-shadow: 0px 0px 20px 12px;
+    -moz-box-shadow: 0px 0px 20px 12px;
+    box-shadow: 0px 12px 20px 2px;
+
+}
+
+.table_class {
+    width: 100%;
+}
+
+fieldset {
+    position: relative;
+    top: -3rem;
+}
+
+.buttons_div {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+#submitButton {
+    margin-left: 1rem;
+}
+/*RD -Responsive Desing*/
+/* 0px      <= Mobil Ekranlar    <=467px 
+    468px  <= Mobil Ekranlar    <=767px
+    768px   <=Dikey Tablet        <=991px
+    992px   <=Yatay Tablet + Minibook Laptop <=1199px
+    1200px <=Notebook + Desktop    */
+
+
+    @media (min-width:0px) and (max-width:467px) {
+
+    }

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Vucut Kitle Indeksi Hesaplama</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="Vucut Kitle Indeksi hesaplaması" />
+    <meta name="keywords" content="Vucut Kitle Indeksi,VKI" />
+    <meta name="author" content="Ali ÇETİN" />
+
+    <!-- favicon -->
+    <link
+      rel="shortcut icon"
+      href="../image/residential-8278516_1280 (1).jpg"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <!-- external css -->
+    <link rel="stylesheet" href="register.css" />
+    <script src="./register.js"></script>
+  </head>
+
+  <body>
+    <!-- start codes -->
+    <header></header>
+    <main class="row">
+      <div class="main_left_section col-3"></div>
+      <form id="formId" class="form_class col-6" onsubmit="registerControl()">
+        <fieldset>
+          <legend><h2>Kayıt olmak için bilgileri giriniz</h2></legend>
+          <table class="table_class">
+            <!--User firstname-->
+            <tr>
+              <td>
+                <label class="label_class">Adınız :</label>
+                <div class="div_input_class input-group col">
+                  <i class="fa-solid fa-user input-group-text"></i>
+                  <input
+                    type="text"
+                    id="firstName"
+                    class="input_class form-control"
+                    name="firstName "
+                    onchange="userHandleChange(event)"
+                    title="Adınızı Giriniz.."
+                    required
+                    autofocus
+                  />
+                </div>
+              </td>
+            </tr>
+            <!--User lastname-->
+            <tr>
+              <td>
+                <label class="label_class">Soyadınız :</label>
+                <div class="div_input_class input-group">
+                  <i class="fa-solid fa-user input-group-text"></i>
+                  <input
+                    type="text"
+                    id="lastName"
+                    class="input_class form-control"
+                    name="lastName"
+                    onchange="userHandleChange(event)"
+                    title="Soyadınızı Giriniz.."
+                    required
+                  />
+                </div>
+              </td>
+            </tr>
+            <!--Email-->
+            <tr>
+              <td>
+                <label class="label_class">Email :</label>
+                <div class="div_input_class input-group">
+                  <i class="fa-solid fa-envelope input-group-text"></i>
+                  <input
+                    type="email"
+                    id="email"
+                    class="input_class form-control"
+                    name="email "
+                    onchange="userHandleChange(event)"
+                    placeholder="Example@example.com"
+                    title="Kullanıcı E-mail Giriniz.."
+                    required
+                  />
+                </div>
+              </td>
+            </tr>
+            <!--Password-->
+            <tr>
+              <td>
+                <label class="label_class">Şifreniz :</label>
+                <div class="div_input_class input-group">
+                  <i class="key_icon input-group-text"
+                    ><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      fill="currentColor"
+                      class="bi bi-key"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M0 8a4 4 0 0 1 7.465-2H14a.5.5 0 0 1 .354.146l1.5 1.5a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0L13 9.207l-.646.647a.5.5 0 0 1-.708 0L11 9.207l-.646.647a.5.5 0 0 1-.708 0L9 9.207l-.646.647A.5.5 0 0 1 8 10h-.535A4 4 0 0 1 0 8zm4-3a3 3 0 1 0 2.712 4.285A.5.5 0 0 1 7.163 9h.63l.853-.854a.5.5 0 0 1 .708 0l.646.647.646-.647a.5.5 0 0 1 .708 0l.646.647.646-.647a.5.5 0 0 1 .708 0l.646.647.793-.793-1-1h-6.63a.5.5 0 0 1-.451-.285A3 3 0 0 0 4 5z"
+                      />
+                      <path d="M4 8a1 1 0 1 1-2 0 1 1 0 0 1 2 0z" />
+                    </svg>
+                  </i>
+                  <input
+                    type="password"
+                    id="uPassword"
+                    class="input_class form-control"
+                    onchange="passHandleChange(event)"
+                    name="uPassword"
+                    placeholder="*******"
+                    title="Kullanıcı Şifresini Giriniz.."
+                    required
+                  />
+                </div>
+              </td>
+            </tr>
+            <!--Config Password-->
+            <tr>
+              <i class="bi bi-0-circle"></i>
+              <i class="bi bi-key"></i>
+              <td>
+                <label class="label_class">Tekrar Şifreniz :</label>
+                <div class="div_input_class input-group">
+                  <i class="key_icon input-group-text"
+                    ><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      fill="currentColor"
+                      class="bi bi-key"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M0 8a4 4 0 0 1 7.465-2H14a.5.5 0 0 1 .354.146l1.5 1.5a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0L13 9.207l-.646.647a.5.5 0 0 1-.708 0L11 9.207l-.646.647a.5.5 0 0 1-.708 0L9 9.207l-.646.647A.5.5 0 0 1 8 10h-.535A4 4 0 0 1 0 8zm4-3a3 3 0 1 0 2.712 4.285A.5.5 0 0 1 7.163 9h.63l.853-.854a.5.5 0 0 1 .708 0l.646.647.646-.647a.5.5 0 0 1 .708 0l.646.647.646-.647a.5.5 0 0 1 .708 0l.646.647.793-.793-1-1h-6.63a.5.5 0 0 1-.451-.285A3 3 0 0 0 4 5z"
+                      />
+                      <path d="M4 8a1 1 0 1 1-2 0 1 1 0 0 1 2 0z" />
+                    </svg>
+                  </i>
+                  <input
+                    type="password"
+                    id="configPassword"
+                    class="input_class form-control"
+                    onchange="passHandleChange(event)"
+                    name="configPassword"
+                    placeholder="*******"
+                    title="Tekrar Kullanıcı Şifresini Giriniz.."
+                    required
+                  />
+                </div>
+              </td>
+            </tr>
+          </table>
+          <!--Register / Reset Buttons -->
+          <div class="buttons_div">
+            <input
+              type="reset"
+              class="btn btn-primary col-3"
+              value="Temizle"
+              id="resetButton"
+              title="Tezmizlemek  yapmak için tıklayınız.."
+            /><input
+              type="submit"
+              class="btn btn-primary col-3"
+              value="Kaydet"
+              id="submitButton"
+              title="Kayıt Yapmak için tıklayınız.."
+            />
+          </div>
+        </fieldset>
+      </form>
+      <div class="main_right_section col-3"></div>
+    </main>
+    <footer>
+      <!-- place footer here -->
+    </footer>
+
+    <!-- end codes -->
+    <!-- Bootstrap JavaScript Libraries -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+      integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
