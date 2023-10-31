@@ -42,7 +42,7 @@
     <header></header>
     <main class="row">
       <div class="main_left_section col-3"></div>
-      <form id="formId" class="form_class col-6" onsubmit="registerControl()">
+      <form id="formId" class="form_class col-6" onsubmit="userCreat()">
         <fieldset>
           <legend><h2>Kayıt olmak için bilgileri giriniz</h2></legend>
           <table class="table_class">
@@ -57,7 +57,7 @@
                     id="firstName"
                     class="input_class form-control"
                     name="firstName "
-                    onchange="userHandleChange(event)"
+                    onchange="handleChange(event,'firstName')"
                     title="Adınızı Giriniz.."
                     required
                     autofocus
@@ -76,7 +76,7 @@
                     id="lastName"
                     class="input_class form-control"
                     name="lastName"
-                    onchange="userHandleChange(event)"
+                    onchange="handleChange(event,'lastName')"
                     title="Soyadınızı Giriniz.."
                     required
                   />
@@ -94,7 +94,7 @@
                     id="email"
                     class="input_class form-control"
                     name="email "
-                    onchange="userHandleChange(event)"
+                    onchange="handleChange(event,'email')"
                     placeholder="Example@example.com"
                     title="Kullanıcı E-mail Giriniz.."
                     required
@@ -126,7 +126,7 @@
                     type="password"
                     id="uPassword"
                     class="input_class form-control"
-                    onchange="passHandleChange(event)"
+                    onchange="handleChange(event,'uPassword')"
                     name="uPassword"
                     placeholder="*******"
                     title="Kullanıcı Şifresini Giriniz.."
@@ -161,7 +161,7 @@
                     type="password"
                     id="configPassword"
                     class="input_class form-control"
-                    onchange="passHandleChange(event)"
+                    onchange="handleChange(event,'configPassword')"
                     name="configPassword"
                     placeholder="*******"
                     title="Tekrar Kullanıcı Şifresini Giriniz.."
